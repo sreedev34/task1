@@ -50,7 +50,7 @@ pipeline {
                             docker build \
                                 -t ${DOCKER_IMAGE}:$BUILD_NUMBER \
                                 -t ${DOCKER_IMAGE}:latest \
-                                -f maker/Dockerfile maker
+                                -f Dockerfile .
 
                             # Push Docker images
                             docker push ${DOCKER_IMAGE}:$BUILD_NUMBER
