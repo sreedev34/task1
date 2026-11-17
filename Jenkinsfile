@@ -71,8 +71,8 @@ pipeline {
                 url: "${MANIFEST_REPO}"
 
                     sh """
-                # Update maker deployment image
-                sed -i '/name: maker/{n;s|image:.*|image: ${DOCKER_IMAGE}:${BUILD_NUMBER}|}' /manifests/deployment.yaml
+                # Update aws-topology deployment image
+                sed -i '/name: aws-topology/{n;s|image:.*|image: ${DOCKER_IMAGE}:${BUILD_NUMBER}|}' manifests/deployment.yaml
 
                 git -c user.name='sreedev34' \
                     -c user.email='sreedevpattiam@gmail.com' \
