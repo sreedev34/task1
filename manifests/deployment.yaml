@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         - name: aws-topology
-          image: IMAGE_PLACEHOLDER          # replaced by Jenkinsfile at deploy time
+          image: sreedev34/maker:3
           imagePullPolicy: Always
           ports:
             - containerPort: 80
